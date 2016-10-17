@@ -44,6 +44,8 @@
             this.minus = new System.Windows.Forms.Button();
             this.times = new System.Windows.Forms.Button();
             this.division = new System.Windows.Forms.Button();
+            this.Clear = new System.Windows.Forms.Button();
+            this.period = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // OneButton
@@ -55,6 +57,7 @@
             this.OneButton.TabIndex = 0;
             this.OneButton.Text = "1";
             this.OneButton.UseVisualStyleBackColor = true;
+            this.OneButton.Click += new System.EventHandler(this.OneButton_Click);
             // 
             // TwoButton
             // 
@@ -65,6 +68,7 @@
             this.TwoButton.TabIndex = 1;
             this.TwoButton.Text = "2";
             this.TwoButton.UseVisualStyleBackColor = true;
+            this.TwoButton.Click += new System.EventHandler(this.TwoButton_Click);
             // 
             // ThreeButton
             // 
@@ -75,6 +79,7 @@
             this.ThreeButton.TabIndex = 2;
             this.ThreeButton.Text = "3";
             this.ThreeButton.UseVisualStyleBackColor = true;
+            this.ThreeButton.Click += new System.EventHandler(this.ThreeButton_Click);
             // 
             // FourButton
             // 
@@ -85,6 +90,7 @@
             this.FourButton.TabIndex = 3;
             this.FourButton.Text = "4";
             this.FourButton.UseVisualStyleBackColor = true;
+            this.FourButton.Click += new System.EventHandler(this.FourButton_Click);
             // 
             // FiveButton
             // 
@@ -95,6 +101,7 @@
             this.FiveButton.TabIndex = 4;
             this.FiveButton.Text = "5";
             this.FiveButton.UseVisualStyleBackColor = true;
+            this.FiveButton.Click += new System.EventHandler(this.FiveButton_Click);
             // 
             // SixButton
             // 
@@ -105,6 +112,7 @@
             this.SixButton.TabIndex = 5;
             this.SixButton.Text = "6";
             this.SixButton.UseVisualStyleBackColor = true;
+            this.SixButton.Click += new System.EventHandler(this.SixButton_Click);
             // 
             // SevenButton
             // 
@@ -115,6 +123,7 @@
             this.SevenButton.TabIndex = 6;
             this.SevenButton.Text = "7";
             this.SevenButton.UseVisualStyleBackColor = true;
+            this.SevenButton.Click += new System.EventHandler(this.SevenButton_Click);
             // 
             // EightButton
             // 
@@ -125,6 +134,7 @@
             this.EightButton.TabIndex = 7;
             this.EightButton.Text = "8";
             this.EightButton.UseVisualStyleBackColor = true;
+            this.EightButton.Click += new System.EventHandler(this.EightButton_Click);
             // 
             // NineButton
             // 
@@ -135,16 +145,18 @@
             this.NineButton.TabIndex = 8;
             this.NineButton.Text = "9";
             this.NineButton.UseVisualStyleBackColor = true;
+            this.NineButton.Click += new System.EventHandler(this.NineButton_Click);
             // 
             // ZeroButton
             // 
             this.ZeroButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ZeroButton.Location = new System.Drawing.Point(12, 265);
+            this.ZeroButton.Location = new System.Drawing.Point(12, 266);
             this.ZeroButton.Name = "ZeroButton";
-            this.ZeroButton.Size = new System.Drawing.Size(140, 50);
+            this.ZeroButton.Size = new System.Drawing.Size(35, 50);
             this.ZeroButton.TabIndex = 9;
             this.ZeroButton.Text = "0";
             this.ZeroButton.UseVisualStyleBackColor = true;
+            this.ZeroButton.Click += new System.EventHandler(this.ZeroButton_Click);
             // 
             // textBox1
             // 
@@ -163,6 +175,7 @@
             this.equals.TabIndex = 11;
             this.equals.Text = "=";
             this.equals.UseVisualStyleBackColor = true;
+            this.equals.Click += new System.EventHandler(this.equals_Click);
             // 
             // plus
             // 
@@ -173,6 +186,7 @@
             this.plus.TabIndex = 12;
             this.plus.Text = "+";
             this.plus.UseVisualStyleBackColor = true;
+            this.plus.Click += new System.EventHandler(this.plus_Click);
             // 
             // minus
             // 
@@ -183,7 +197,7 @@
             this.minus.TabIndex = 13;
             this.minus.Text = "-";
             this.minus.UseVisualStyleBackColor = true;
-            this.minus.Click += new System.EventHandler(this.button3_Click);
+            this.minus.Click += new System.EventHandler(this.minus_Click);
             // 
             // times
             // 
@@ -194,6 +208,7 @@
             this.times.TabIndex = 14;
             this.times.Text = "*";
             this.times.UseVisualStyleBackColor = true;
+            this.times.Click += new System.EventHandler(this.times_Click);
             // 
             // division
             // 
@@ -204,12 +219,37 @@
             this.division.TabIndex = 15;
             this.division.Text = "/";
             this.division.UseVisualStyleBackColor = true;
+            this.division.Click += new System.EventHandler(this.division_Click);
+            // 
+            // Clear
+            // 
+            this.Clear.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Clear.Location = new System.Drawing.Point(114, 266);
+            this.Clear.Name = "Clear";
+            this.Clear.Size = new System.Drawing.Size(35, 50);
+            this.Clear.TabIndex = 16;
+            this.Clear.Text = "C";
+            this.Clear.UseVisualStyleBackColor = true;
+            this.Clear.Click += new System.EventHandler(this.Clear_Click);
+            // 
+            // period
+            // 
+            this.period.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.period.Location = new System.Drawing.Point(62, 265);
+            this.period.Name = "period";
+            this.period.Size = new System.Drawing.Size(35, 50);
+            this.period.TabIndex = 17;
+            this.period.Text = ".";
+            this.period.UseVisualStyleBackColor = true;
+            this.period.Click += new System.EventHandler(this.period_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(237, 327);
+            this.Controls.Add(this.period);
+            this.Controls.Add(this.Clear);
             this.Controls.Add(this.division);
             this.Controls.Add(this.times);
             this.Controls.Add(this.minus);
@@ -251,6 +291,8 @@
         private System.Windows.Forms.Button minus;
         private System.Windows.Forms.Button times;
         private System.Windows.Forms.Button division;
+        private System.Windows.Forms.Button Clear;
+        private System.Windows.Forms.Button period;
     }
 }
 
