@@ -21,7 +21,7 @@ namespace Calculator
         public Form1()
         {
             InitializeComponent();
-        )
+        }
 
         private void ZeroButton_Click(object sender, EventArgs e)
         {
@@ -95,7 +95,10 @@ namespace Calculator
 
         private void Clear_Click(object sender, EventArgs e)
         {
-
+            this.textBox1.Text = "";
+            this.input = string.Empty;
+            this.operand1 = string.Empty;
+            this.operand2 = string.Empty;
         }
 
         private void plus_Click(object sender, EventArgs e)
@@ -126,14 +129,47 @@ namespace Calculator
             input = string.Empty;
         }
 
-        private void equals_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void period_Click(object sender, EventArgs e)
         {
-
+            input += ".";
         }
+
+        private void equals_Click(object sender, EventArgs e)
+        {
+            operand2 = input;
+            double num1, num2;
+            double.TryParse(operand1, out num1);
+            double.TryParse(operand2, out num2);
+
+            if (operation == "+")
+            {
+                result = num1 + num2;
+                textBox1.Text = result.ToString();
+            }
+            else if (operation == "-")
+            {
+                result = num1 - num2;
+                textBox1.Text = result.ToString();
+            }
+            else if (operation == "*")
+            {
+                result = num1 * num2;
+                textBox1.Text = result.ToString();
+            }
+            else if (operation == "/")
+            {
+                if (num2 != 0)
+                {
+                    result = num1 / num2;
+                    textBox1.Text = result.ToString();
+                }
+                else
+                {
+                    textBox1.Text = "DIV/Zero!";
+                }
+            }
+        }
+
+       
     }
 }
