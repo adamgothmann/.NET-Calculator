@@ -141,29 +141,29 @@ namespace Calculator
             double.TryParse(operand1, out num1);
             double.TryParse(operand2, out num2);
 
-            if (operation == "+")
+            if (operation == "+") // If the user clicks the "+" button, it will add the numbers.
             {
                 result = num1 + num2;
                 textBox1.Text = result.ToString();
             }
-            else if (operation == "-")
+            else if (operation == "-") // If the user clicks the "-" button, it will subtract the numbers.
             {
                 result = num1 - num2;
                 textBox1.Text = result.ToString();
             }
-            else if (operation == "*")
+            else if (operation == "*") // If the user clicks the "*" button, it will multiply the numbers.
             {
                 result = num1 * num2;
                 textBox1.Text = result.ToString();
             }
             else if (operation == "/")
             {
-                if (num2 != 0)
+                if (num2 != 0) // This checks to see if the number is 0. If it isn't, it will divide the numbers.
                 {
                     result = num1 / num2;
                     textBox1.Text = result.ToString();
                 }
-                else
+                else // if the number is 0, the text box will display this message.
                 {
                     textBox1.Text = "DIV/Zero!";
                 }
